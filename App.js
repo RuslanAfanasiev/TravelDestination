@@ -1,10 +1,11 @@
-import {StyleSheet} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeScreen from './src/components/HomeScreen';
-import AboutScreen from './src/components/AboutScreen';
-import ContactUsScreen from './src/components/ContactUsScreen';
-import GalleryScreen from './src/components/GalleryScreen';
+import { StyleSheet } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import HomeScreen from "./src/components/HomeScreen";
+import AboutScreen from "./src/components/AboutScreen";
+import ContactUsScreen from "./src/components/ContactUsScreen";
+import GalleryScreen from "./src/components/GalleryScreen";
+import TravelDestinations from "./src/components/TravelDestination";
 
 const Drawer = createDrawerNavigator();
 export default function App() {
@@ -15,6 +16,10 @@ export default function App() {
         <Drawer.Screen name="About" component={AboutScreen} />
         <Drawer.Screen name="Contact Us" component={ContactUsScreen} />
         <Drawer.Screen name="Gallery" component={GalleryScreen} />
+        <Drawer.Screen
+          name="Travel Destinations"
+          component={TravelDestinations}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );
@@ -23,60 +28,60 @@ export default function App() {
 const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
-     backgroundColor: 'rgba(255, 255, 255, 0.5)'
+    resizeMode: "cover",
+    justifyContent: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
   },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     paddingHorizontal: 20,
   },
   scrollContainer: {
     flexGrow: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 20,
   },
   formContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 20,
   },
   galleryContainer: {
     padding: 10,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
   },
   text: {
     fontSize: 24,
-    color: 'white',
-    fontWeight: 'bold',
+    color: "white",
+    fontWeight: "bold",
     marginBottom: 20,
   },
   subText: {
     fontSize: 18,
-    color: 'white',
-    textAlign: 'center',
+    color: "white",
+    textAlign: "center",
   },
   description: {
     fontSize: 16,
-    color: 'white',
+    color: "white",
     marginVertical: 20,
-    textAlign: 'justify',
+    textAlign: "justify",
   },
   input: {
-    width: '80%',
+    width: "80%",
     height: 40,
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderWidth: 1,
     borderRadius: 5,
     marginBottom: 20,
     paddingHorizontal: 10,
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
   },
   galleryImage: {
     width: 150,
@@ -86,29 +91,27 @@ const styles = StyleSheet.create({
   },
   destinationName: {
     fontSize: 16,
-    color: '#333',
-    textAlign: 'center',
+    color: "#333",
+    textAlign: "center",
   },
   imageContainer: {
     margin: 10,
-   flex:'display',
-   alignItems:'center',
-   justifyContent:'center',
-   flexDirection:'column'
-
+    flex: "display",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
   },
-  button:{
-    backgroundColor:'#FDCE96',
-    borderRadius:10,
-    width:90,
-    
+  button: {
+    backgroundColor: "#FDCE96",
+    borderRadius: 10,
+    width: 90,
   },
-  buttonText:{
-    textAlign:'center',
+  buttonText: {
+    textAlign: "center",
     paddingVertical: 6,
-    paddingHorizontal: 16,   
-     color:'white'
-  }
+    paddingHorizontal: 16,
+    color: "white",
+  },
 });
 
-export {styles}
+export { styles };

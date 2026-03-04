@@ -1,6 +1,6 @@
 import { View, Text, TextInput, Button, ImageBackground } from "react-native";
 import { styles } from "../../App";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ContactUsScreen = () => {
   const [name, setName] = useState("");

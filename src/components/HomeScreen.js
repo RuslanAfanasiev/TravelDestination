@@ -10,4 +10,4 @@ const HomeScreen = () => (
       </View>
     </ImageBackground>
   );
-  export default HomeScreen
+  export default HomeScreen;
